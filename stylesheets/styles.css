@@ -1,0 +1,37 @@
+body {
+  background-color: white;
+  font-family: sans-serif;
+  color: white;
+}
+.body_thing {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top: 300px;
+  margin: 0% 35%;
+  background: rgb(0,171,225);
+  background: linear-gradient(315deg, rgba(0,171,225,1) 0%, rgba(22,31,109,1) 100%);
+  border-radius: 10px;
+  padding: 80px 0px;
+}
+form {
+  text-align: center;
+}
+form input {
+  padding: 10px 20px;
+  margin: 5px;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  transition: all 0.2s ease-out;
+}
+form input[type=submit]:hover {
+  padding: 10px 80px;
+  color: white;
+  background-color: #00ABE1;
+}
+a {
+  color: #161F6D;
+}
