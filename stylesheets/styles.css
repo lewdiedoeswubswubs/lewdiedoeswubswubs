@@ -1,7 +1,10 @@
 body {
+  background-image: url("../images/bg.jpg");
   background-color: white;
   font-family: sans-serif;
   color: white;
+  background-size: cover;
+  background-attachment: fixed;
 }
 .body_thing {
   display: flex;
