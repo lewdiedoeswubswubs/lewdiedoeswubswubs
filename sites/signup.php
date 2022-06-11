@@ -2,12 +2,12 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Signup - Fedumcoda</title>
+    <title>Login - Fedumcoda</title>
     <link rel="stylesheet" href="../stylesheets/styles.css">
   </head>
   <body>
     <div class="body_thing">
-      <h1>LOGIN</h1>
+      <h1>Sign-up</h1>
       <div class="form">
         <form class="" action="index.html" method="post">
           <div class="text_field">
@@ -17,10 +17,17 @@
             <input type="password" name="" placeholder="Password">
           </div>
           <div class="text_field">
-            <input type="submit" name="Login" value="Login">
+            <input type="password" name="" placeholder="Confirm Password">
+          </div>
+          <div class="text_field">
+            <label for="">Receive updates through email</label>
+            <input type="checkbox" name="" value="">
+          </div>
+          <div class="text_field">
+            <input type="submit" name="Login" value="Sign In">
           </div>
           <div class="register">
-            <p>Don't have an account?<a href="#">Sign Up!</a></p>
+            <p>Already have an account?<a href="index.html">Log in!</a></p>
           </div>
         </form>
       </div>
