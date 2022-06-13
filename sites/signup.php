@@ -1,3 +1,26 @@
+<?php
+session_start();
+    include("connection.php");
+    include("functions.php");
+    if($_SERVER['REQUEST_METHOD'] == "POST")
+    {
+      $username = $_POST['user_name'];
+      $password = $_POST['password'];
+      $email = $_POST['$email'];
+      $name = $_POST['$name'];
+      if(!empty($user_name)&& !empty($password)&& !is_numeric($user_name))
+      {
+        $user_ID = random_num(9);
+        $query = "INSERT INTO tblmembers (user_ID, email, username, password, name) VALUES ('$user_ID', '$email', '$username', '$password', '$name')";
+        mysqli_query($conn,$query);
+        header("Location: login:php");
+        die;
+      }else
+      {
+        echo "Please enter some valid information";
+      }
+    }
+?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -9,15 +32,21 @@
     <div class="body_thing">
       <h1>Sign-up</h1>
       <div class="form">
-        <form class="" action="index.html" method="post">
+        <form class="" method="post">
           <div class="text_field">
-            <input type="email" name="" placeholder="Email">
+            <input type="text" name="user_name" placeholder="username">
           </div>
           <div class="text_field">
-            <input type="password" name="" placeholder="Password">
+            <input type="text" name="name" placeholder="name">
           </div>
           <div class="text_field">
-            <input type="password" name="" placeholder="Confirm Password">
+            <input type="email" name="email" placeholder="Email">
+          </div>
+          <div class="text_field">
+            <input type="password" name="password" placeholder="Password">
+          </div>
+          <div class="text_field">
+            <input type="password" name="passwordConfirm" placeholder="Confirm Password">
           </div>
           <div class="text_field">
             <label for="">Receive updates through email</label>
