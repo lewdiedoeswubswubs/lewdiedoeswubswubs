@@ -4,8 +4,10 @@
   $dbpass = "";
   $dbname = "fedumcoda";
 
-  if (!$conn = mysqli_connect($dbhost,$dbuser,$dbpass,$dbname))
-  {
-    die("Failed to connect");
+  $mysqli = new mysqli(hostname: $dbhost, username: $dbuser, password: $dbpass, database: $dbname);
+
+  if($mysqli -> connect_errno) {
+    die("Connection error: ". $mysqli ->connecterror);
   }
+  return $mysqli;
 ?>
