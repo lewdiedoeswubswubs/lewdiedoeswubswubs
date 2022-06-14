@@ -27,10 +27,14 @@ if (!$stmt -> prepare($sql)){
 }
 $stmt->bind_param("sss", $_POST["user_name"],$_POST["email"],$password_hash);
 if($stmt ->execute()) {
-  echo "Signup Bruh";
+  header("Location: success.html");
 }
 else {
-  die($mysqli->error. "" . $mysqli->errorno);
+  if($mysqli->errorno === 1062){
+    die("Email is taken");
+  }else{
+    die($mysqli->error. "" . $mysqli->errorno);
+  }
 }
 
 ?>
